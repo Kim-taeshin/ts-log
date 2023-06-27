@@ -1,14 +1,16 @@
 <template>
     <div class="code-wrap">
         <div>{{ myTitle }}</div>
-        <div ref="ref_code"><pre><code class="code-block">{{ myCode }}</code></pre></div>
+        <pre><code class="code-block">{{ myCode }}</code></pre>
     </div>
 </template>
 
 <script lang="ts">
 import hljs from "highlight.js";
+import 'highlight.js/styles/default.css';
 import { defineComponent, ref } from 'vue';
 
+// export default defineComponent ({
 export default defineComponent ({
   
     props: {
@@ -28,8 +30,11 @@ export default defineComponent ({
     },
 
     mounted() {
-        document.querySelectorAll("code").forEach((el)=>{
-            hljs.highlightElement(el);
+
+        
+        document.querySelectorAll("pre code").forEach((el)=>{
+            // hljs.highlightElement(el);
+            hljs.highlightBlock(el as HTMLElement);
             console.log("hljs = ", hljs);
         })
 
