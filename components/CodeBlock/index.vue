@@ -26,9 +26,14 @@ export default defineComponent ({
     },
 
     mounted() {
-        document.querySelectorAll("code").forEach((el)=>{
-            hljs.highlightElement(el);
-        })
+        // document.querySelectorAll("code").forEach((el)=>{
+        //     hljs.highlightElement(el);
+        // })
+
+        setTimeout(()=> {
+        document.querySelectorAll('pre')
+        .forEach((block) => hljs.highlightElement(block));
+        }, 1000);
     }
 })
 </script>
