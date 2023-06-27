@@ -1,7 +1,7 @@
 <template>
     <div class="code-wrap">
-        <div></div>
-        <pre><code class="code-block"></code></pre>
+        <div>{{ myTitle }}</div>
+        <pre><code class="code-block">{{ myCode }}</code></pre>
     </div>
 </template>
 
