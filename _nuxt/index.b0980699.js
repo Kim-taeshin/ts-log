@@ -1,0 +1,1 @@
+import{_ as t,l as n,k as o,m as e}from"./entry.db635431.js";const s={},c=e("div",{class:"sentence"},[e("h1",null,"about"),e("h2",null,"about"),e("p",null,"about")],-1),a=[c];function l(_,r){return o(),n("div",null,a)}const d=t(s,[["render",l]]);export{d as default};
