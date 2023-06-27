@@ -28,18 +28,19 @@ export default defineComponent ({
     },
 
     mounted() {
-        // document.querySelectorAll("code").forEach((el)=>{
-        //     hljs.highlightElement(el);
-        // })
-
-        if(this.ref_code){
-            const el = this.ref_code as HTMLElement;
+        document.querySelectorAll("code").forEach((el)=>{
             hljs.highlightElement(el);
+            console.log("hljs = ", hljs);
+        })
 
-            console.log(hljs);
-        }
+        // if(this.ref_code){
+        //     const el = this.ref_code as HTMLElement;
+        //     hljs.highlightElement(el);
 
-        console.log(hljs);
+        //     console.log(hljs);
+        // }
+
+        
 
         // setTimeout(()=> {
 
