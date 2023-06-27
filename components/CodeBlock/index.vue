@@ -39,6 +39,8 @@ export default defineComponent ({
             console.log(hljs);
         }
 
+        console.log(hljs);
+
         // setTimeout(()=> {
 
         // document.querySelectorAll('pre')
