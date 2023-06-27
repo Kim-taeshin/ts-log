@@ -32,7 +32,7 @@ export default defineComponent ({
 
         setTimeout(()=> {
         document.querySelectorAll('pre')
-        .forEach((block) => hljs.highlightElement(block));
+        .forEach((el) => hljs.highlightElement(el));
         }, 1000);
     }
 })
