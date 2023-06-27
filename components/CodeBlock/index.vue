@@ -20,23 +20,18 @@ export default defineComponent ({
 
     setup(props)
     {
-        const ref_code = ref(null);
-
         const myTitle = ref(props.fileName);
         const myCode = ref(props.code);
         return {
-            ref_code, myCode, myTitle
+            myCode, myTitle
         }
     },
 
     mounted() {
-
-        
-        document.querySelectorAll("pre code").forEach((el)=>{
-            // hljs.highlightElement(el);
-            hljs.highlightBlock(el as HTMLElement);
-            console.log("hljs = ", hljs);
-        })
+        // document.querySelectorAll("pre code").forEach((el)=>{
+        //     hljs.highlightBlock(el as HTMLElement);
+        //     console.log("hljs = ", hljs);
+        // })
 
         // if(this.ref_code){
         //     const el = this.ref_code as HTMLElement;
@@ -47,11 +42,11 @@ export default defineComponent ({
 
         
 
-        // setTimeout(()=> {
+        setTimeout(()=> {
 
-        // document.querySelectorAll('pre')
-        // .forEach((el) => hljs.highlightElement(el));
-        // }, 1000);
+        document.querySelectorAll('pre')
+        .forEach((el) => hljs.highlightElement(el));
+        }, 1000);
     }
 })
 </script>
