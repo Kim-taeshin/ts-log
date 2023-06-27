@@ -35,6 +35,8 @@ export default defineComponent ({
         if(this.ref_code){
             const el = this.ref_code as HTMLElement;
             hljs.highlightElement(el);
+
+            console.log(hljs);
         }
 
         // setTimeout(()=> {
