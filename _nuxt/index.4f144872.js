@@ -1,0 +1,1 @@
+import{_ as t}from"./index.f379e8ae.js";import{_ as n,l as s,m as e,q as c,k as _}from"./entry.ae44c75c.js";const a={},l={clasee:"box"},d={class:"sentence"},r=e("h1",null,"about",-1),i=e("h2",null,"about",-1),u=e("p",null,"about",-1);function m(h,p){const o=t;return _(),s("div",null,[e("div",l,[e("div",d,[r,i,u,c(o)])])])}const b=n(a,[["render",m]]);export{b as default};

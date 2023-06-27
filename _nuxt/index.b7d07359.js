@@ -1,1 +1,0 @@
-import{_ as t}from"./index.44d32324.js";import{_ as n,l as s,m as e,q as c,k as _}from"./entry.090e83a7.js";const a={},l={class:"sentence"},r=e("h1",null,"about",-1),d=e("h2",null,"about",-1),i=e("p",null,"about",-1);function u(m,p){const o=t;return _(),s("div",null,[e("div",l,[r,d,i,c(o)])])}const x=n(a,[["render",u]]);export{x as default};
