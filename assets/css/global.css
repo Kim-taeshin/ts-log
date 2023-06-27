@@ -1,4 +1,4 @@
-﻿/* @import "/node_modules/highlight.js/styles/nord.css"; */
+﻿@import "/node_modules/highlight.js/styles/nord.css";
 
 .contents {
   background: #0b5394;
