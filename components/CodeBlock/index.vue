@@ -13,7 +13,7 @@ export default defineComponent ({
   
     props: {
         fileName: {type:String, default: "Syntax"},
-        code: {type:String, default: `Consol.log("0123456789")"`},
+        code: {type:String, default: `Consol.log("0123456789")`},
     },
 
     setup(props)
@@ -26,14 +26,15 @@ export default defineComponent ({
     },
 
     mounted() {
-        // document.querySelectorAll("code").forEach((el)=>{
-        //     hljs.highlightElement(el);
-        // })
+        document.querySelectorAll("code").forEach((el)=>{
+            hljs.highlightElement(el);
+        })
 
-        setTimeout(()=> {
-        document.querySelectorAll('pre')
-        .forEach((el) => hljs.highlightElement(el));
-        }, 1000);
+        // setTimeout(()=> {
+
+        // document.querySelectorAll('pre')
+        // .forEach((el) => hljs.highlightElement(el));
+        // }, 1000);
     }
 })
 </script>
