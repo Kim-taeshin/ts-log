@@ -7,6 +7,6 @@ export default defineNuxtConfig({
   css: [
     "~/assets/css/global.css",
     "~/assets/css/fonts.css",
-    "~/asstes/css/nord.css",
+    "~/assets/css/nord.css",
   ],
 });
