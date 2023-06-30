@@ -6,6 +6,11 @@ hljs.registerLanguage("javascript", javascript);
 
 export default defineNuxtPlugin((nuxtApp) => {
   // nuxtApp.vueApp.use(hljsVuePlugin);
+  return {
+    provide: {
+      hljs,
+    },
+  };
 });
 
 // export default (app) => {
