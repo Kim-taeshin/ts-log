@@ -9,5 +9,5 @@ export default defineNuxtConfig({
     "~/assets/css/fonts.css",
     "~/assets/css/nord.css",
   ],
-  plugins: ["~/plugins/highlight.js"],
+  plugins: ["~/plugins/highlight.ts"],
 });
