@@ -1,4 +1,7 @@
-﻿.contents {
+﻿@import "/node_modules/highlight.js/styles/nord.css";
+@import "highlight";
+
+.contents {
   background: #0b5394;
 
   background: -webkit-linear-gradient(left top, #0b5394, #660000);
