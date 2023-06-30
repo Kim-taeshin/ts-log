@@ -41,14 +41,15 @@ export default defineComponent ({
         // }
 
         // hljs.initHighlighting();
+        hljs.highlightAll();
 
-        setTimeout(()=> {
+        // setTimeout(()=> {
 
 
 
-        document.querySelectorAll('pre')
-        .forEach((el) => hljs.highlightElement(el));
-        }, 1000);
+        // document.querySelectorAll('pre')
+        // .forEach((el) => hljs.highlightElement(el));
+        // }, 1000);
     }
 })
 </script>
