@@ -40,9 +40,11 @@ export default defineComponent ({
         //     console.log(hljs);
         // }
 
-        
+        hljs.initHighlighting();
 
         setTimeout(()=> {
+
+
 
         document.querySelectorAll('pre')
         .forEach((el) => hljs.highlightElement(el));
