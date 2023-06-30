@@ -40,7 +40,7 @@ export default defineComponent ({
         //     console.log(hljs);
         // }
 
-        hljs.initHighlighting();
+        // hljs.initHighlighting();
 
         setTimeout(()=> {
 
