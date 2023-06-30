@@ -41,6 +41,8 @@ export default defineComponent ({
         // }
 
         // hljs.initHighlighting();
+        // hljs = require('highlight.js');
+        hljs.initHighlighting();
         hljs.highlightAll();
 
         // setTimeout(()=> {
