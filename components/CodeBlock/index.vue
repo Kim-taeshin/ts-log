@@ -1,12 +1,13 @@
 <template>
     <div class="code-wrap">
         <div>{{ myTitle }}</div>
-        <pre><code class="code-block">{{ myCode }}</code></pre>
+        <div v-highlight>
+            <pre><code class="code-block">{{ myCode }}</code></pre>
+        </div>
     </div>
 </template>
 
 <script lang="ts">
-import hljs from "highlight.js";
 import 'highlight.js/styles/default.css';
 import { defineComponent, ref } from 'vue';
 
@@ -15,7 +16,7 @@ export default defineComponent ({
   
     props: {
         fileName: {type:String, default: "Syntax"},
-        code: {type:String, default: `Consol.log("0123456789")`},
+        code: {type:String, default: `Consol.log("0123456789") const a:Number = 100`},
     },
 
     setup(props)
@@ -42,16 +43,19 @@ export default defineComponent ({
 
         // hljs.initHighlighting();
         // hljs = require('highlight.js');
-        hljs.initHighlighting();
-        hljs.highlightAll();
-
-        setTimeout(()=> {
 
 
 
-        document.querySelectorAll('pre')
-        .forEach((el) => hljs.highlightElement(el));
-        }, 1000);
+        // hljs.initHighlighting();
+        // hljs.highlightAll();
+
+        // setTimeout(()=> {
+
+
+
+        // document.querySelectorAll('pre')
+        // .forEach((el) => hljs.highlightElement(el));
+        // }, 1000);
     }
 })
 </script>
