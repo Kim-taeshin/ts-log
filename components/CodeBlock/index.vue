@@ -60,3 +60,5 @@ export default defineComponent ({
     }
 })
 </script>
+
+<style src="highlight.js/styles/nord.css"></style>
