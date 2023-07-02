@@ -11,9 +11,9 @@ hljs.registerLanguage("html", html);
 export default defineNuxtPlugin((nuxtApp) => {
   nuxtApp.vueApp.directive("highlight", {
     mounted(el: Element) {
-      console.log(document);
+      // console.log(document);
       document.querySelectorAll("pre code").forEach((el) => {
-        console.log(hljs);
+        // console.log(hljs);
         hljs.highlightElement(el as HTMLElement);
       });
     },
@@ -22,7 +22,7 @@ export default defineNuxtPlugin((nuxtApp) => {
     },
     getSSRProps(binding, vnode) {
       // you can provide SSR-specific props here
-      console.log("return");
+      // console.log("return");
       return { hljs };
     },
   });
