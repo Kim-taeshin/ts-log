@@ -3,11 +3,15 @@ import hljs from "highlight.js/lib/core";
 
 export default defineNuxtPlugin((nuxtApp) => {
   nuxtApp.vueApp.directive("highlight", {
-    mounted(el: HTMLElement) {
-      hljs.highlightBlock(el);
+    mounted(el: Element) {
+      console.log(document);
+      document.querySelectorAll("pre code").forEach((el) => {
+        console.log(hljs);
+        hljs.highlightElement(el as HTMLElement);
+      });
     },
-    updated(el: HTMLElement) {
-      hljs.highlightBlock(el);
+    updated(el: Element) {
+      hljs.highlightBlock(el as HTMLElement);
     },
   });
 });
@@ -16,7 +20,7 @@ export default defineNuxtPlugin((nuxtApp) => {
 //   nuxtApp.vueApp.directive("highlight", (el: Element) => {
 //     const block = el.querySelectorAll("pre code");
 //     block.forEach((block: Element) => {
-//       Hljs.highlightBlock(block as HTMLElement);
+//       hljs.highlightBlock(block as HTMLElement);
 //     });
 //   });
 // });
@@ -31,14 +35,3 @@ export default defineNuxtPlugin((nuxtApp) => {
 //     },
 //   };
 // });
-
-// export default (app) => {
-//   app.directive("highlight", {
-//     mounted(el) {
-//       hljs.highlightBlock(el);
-//     },
-//     updated(el) {
-//       hljs.highlightBlock(el);
-//     },
-//   });
-// };
