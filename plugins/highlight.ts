@@ -1,5 +1,6 @@
 // import hljsVuePlugin from "@highlightjs/vue-plugin";
 import hljs from "highlight.js/lib/core";
+import "highlight.js/styles/github.css";
 
 export default defineNuxtPlugin((nuxtApp) => {
   nuxtApp.vueApp.directive("highlight", {
@@ -12,6 +13,11 @@ export default defineNuxtPlugin((nuxtApp) => {
     },
     updated(el: Element) {
       hljs.highlightBlock(el as HTMLElement);
+    },
+    getSSRProps(binding, vnode) {
+      // you can provide SSR-specific props here
+      console.log("return");
+      return { hljs };
     },
   });
 });

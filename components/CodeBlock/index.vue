@@ -8,15 +8,23 @@
 </template>
 
 <script lang="ts">
+import hljs from "highlight.js/lib/core";
+import css from 'highlight.js/lib/languages/css';
+import javascript from 'highlight.js/lib/languages/javascript';
+import html from 'highlight.js/lib/languages/xml';
 import 'highlight.js/styles/default.css';
 import { defineComponent, ref } from 'vue';
+
+hljs.registerLanguage('javascript', javascript); 
+hljs.registerLanguage('css', css); 
+hljs.registerLanguage('html', html);
 
 // export default defineComponent ({
 export default defineComponent ({
   
     props: {
         fileName: {type:String, default: "Syntax"},
-        code: {type:String, default: `Consol.log("0123456789") const a:Number = 100`},
+        code: {type:String, default: `function testFnc($num: number): void`},
     },
 
     setup(props)
@@ -29,7 +37,9 @@ export default defineComponent ({
     },
 
     mounted() {
-        console.log("b");
+        
+        // hljs.initHighlighting();
+
         // document.querySelectorAll("pre code").forEach((el)=>{
         //     hljs.highlightBlock(el as HTMLElement);
         //     console.log("hljs = ", hljs);
