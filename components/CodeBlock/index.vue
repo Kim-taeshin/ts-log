@@ -8,18 +8,8 @@
 </template>
 
 <script lang="ts">
-import hljs from "highlight.js/lib/core";
-import css from 'highlight.js/lib/languages/css';
-import javascript from 'highlight.js/lib/languages/javascript';
-import html from 'highlight.js/lib/languages/xml';
-import 'highlight.js/styles/default.css';
 import { defineComponent, ref } from 'vue';
 
-hljs.registerLanguage('javascript', javascript); 
-hljs.registerLanguage('css', css); 
-hljs.registerLanguage('html', html);
-
-// export default defineComponent ({
 export default defineComponent ({
   
     props: {

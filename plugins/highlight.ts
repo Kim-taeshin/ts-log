@@ -1,6 +1,12 @@
 // import hljsVuePlugin from "@highlightjs/vue-plugin";
 import hljs from "highlight.js/lib/core";
+import css from "highlight.js/lib/languages/css";
+import javascript from "highlight.js/lib/languages/javascript";
+import html from "highlight.js/lib/languages/xml";
 import "highlight.js/styles/github.css";
+hljs.registerLanguage("javascript", javascript);
+hljs.registerLanguage("css", css);
+hljs.registerLanguage("html", html);
 
 export default defineNuxtPlugin((nuxtApp) => {
   nuxtApp.vueApp.directive("highlight", {
