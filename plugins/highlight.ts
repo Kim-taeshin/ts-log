@@ -21,9 +21,7 @@ export default defineNuxtPlugin((nuxtApp) => {
       hljs.highlightBlock(el as HTMLElement);
     },
     getSSRProps(binding, vnode) {
-      // you can provide SSR-specific props here
-      console.log("return");
-      return { hljs };
+      return {};
     },
   });
 });
