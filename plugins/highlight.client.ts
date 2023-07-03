@@ -4,9 +4,22 @@ import css from "highlight.js/lib/languages/css";
 import javascript from "highlight.js/lib/languages/javascript";
 import html from "highlight.js/lib/languages/xml";
 import "highlight.js/styles/nord.css";
-hljs.registerLanguage("javascript", javascript);
-hljs.registerLanguage("css", css);
-hljs.registerLanguage("html", html);
+// hljs.registerLanguage("javascript", javascript);
+// hljs.registerLanguage("css", css);
+// hljs.registerLanguage("html", html);
+
+export default defineNuxtPlugin((nuxtApp) => {
+  hljs.registerLanguage("javascript", javascript);
+  hljs.registerLanguage("css", css);
+  hljs.registerLanguage("html", html);
+
+  nuxtApp.hook("page:finish", () => {
+    document.querySelectorAll("pre code").forEach((el) => {
+      hljs.highlightElement(el as HTMLElement);
+    });
+  });
+  nuxtApp.provide("hljs", hljs);
+});
 
 // export default defineNuxtPlugin((nuxtApp) => {
 //   nuxtApp.vueApp.directive("highlight", {
@@ -24,14 +37,14 @@ hljs.registerLanguage("html", html);
 //   });
 // });
 
-export default defineNuxtPlugin(async (nuxtApp) => {
-  nuxtApp.vueApp.directive("highlight", (el: Element) => {
-    const block = el.querySelectorAll("pre code");
-    block.forEach((block: Element) => {
-      hljs.highlightBlock(block as HTMLElement);
-    });
-  });
-});
+// export default defineNuxtPlugin(async (nuxtApp) => {
+//   nuxtApp.vueApp.directive("highlight", (el: Element) => {
+//     const block = el.querySelectorAll("pre code");
+//     block.forEach((block: Element) => {
+//       hljs.highlightBlock(block as HTMLElement);
+//     });
+//   });
+// });
 
 // hljs.registerLanguage("javascript", javascript);
 

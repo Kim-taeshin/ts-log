@@ -10,7 +10,7 @@ export default defineNuxtConfig({
     "~/assets/css/nord.css",
   ],
   //client
-  plugins: ["~/plugins/highlight.ts", "~/plugins/pixi.ts"],
+  plugins: ["~/plugins/highlight.client.ts", "~/plugins/pixi.ts"],
 
   // app: {
   //   head: {
