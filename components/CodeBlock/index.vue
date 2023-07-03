@@ -1,7 +1,7 @@
 <template>
     <div class="code-wrap">
         <div>{{ myTitle }}</div>
-        <div>
+        <div v-highlight>
             <pre><code class="code-block">{{ myCode }}</code></pre>
         </div>
     </div>
