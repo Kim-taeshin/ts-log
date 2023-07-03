@@ -8,7 +8,6 @@
 </template>
 
 <script lang="ts">
-import hljs from "highlight.js";
 import { defineComponent, ref } from 'vue';
 
 export default defineComponent ({
@@ -51,12 +50,12 @@ export default defineComponent ({
         // hljs.initHighlighting();
         // hljs.highlightAll();
 
-        setTimeout(()=> {
-        document.querySelectorAll('pre')
-        .forEach((el) => hljs.highlightElement(el));
-        }, 1000);
+        // setTimeout(()=> {
+        // document.querySelectorAll('pre')
+        // .forEach((el) => hljs.highlightElement(el));
+        // }, 1000);
     }
 })
 </script>
 
-<style src="highlight.js/styles/nord.css"></style>
+<!-- <style src="highlight.js/styles/nord.css"></style> -->

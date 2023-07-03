@@ -22,7 +22,7 @@ export default defineNuxtPlugin((nuxtApp) => {
     },
     getSSRProps(binding, vnode) {
       // you can provide SSR-specific props here
-      // console.log("return");
+      console.log("return");
       return { hljs };
     },
   });
