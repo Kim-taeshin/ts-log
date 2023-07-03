@@ -14,7 +14,10 @@ export default defineComponent ({
   
     props: {
         fileName: {type:String, default: "Syntax"},
-        code: {type:String, default: `function testFnc($num: number): void`},
+        code: {type:String, default: `function testFnc($num: number): void
+            {
+                const n: number = 100;
+            }`},
     },
 
     setup(props)
