@@ -55,8 +55,8 @@ export default defineComponent ({
         // hljs.highlightAll();
 
         setTimeout(()=> {
-        document.querySelectorAll('pre')
-        .forEach((el) => hljs.highlightElement(el));
+        document.querySelectorAll('pre code')
+        .forEach((el) => hljs.highlightElement(el as HTMLElement));
         }, 1000);
     }
 })
