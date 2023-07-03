@@ -8,6 +8,7 @@
                     <h2>about</h2>
                     <p>about</p>
                     <CodeBlock />
+                    <PixiFPS />
                 </div>
             </div>
         </div>
